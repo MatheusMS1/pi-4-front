@@ -1,22 +1,37 @@
 import React, { useEffect, useState } from 'react'
 
 const ApiTest = () => {
-  const [ equipamentos, setEquipamentos ] = useState(null)
+  const [ carregando, setCarregando ] = useState(null)
+  const [ tipos, setTipos ] = useState(null)
 
-  useEffect(() => {
-    fetch('https://api-pi-2on3.onrender.com/tipos', {
-      method: 'GET',
-      headers: {
-        'Content-type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      }
-    })
-    .then(res => console.log(res))
-    // .then(json => console.log(json))
-  }, [])
+  const fetchTipos = async () => {
+    const response = await fetch('https://api-pi-2on3.onrender.com/tipos')
+    const json = await response.json()
+    setTipos(json)
+    setCarregando(false)
+    return {response, json}
+  }
+
+  const handleClick = () => {
+    setCarregando(true)
+    fetchTipos()
+  }
 
   return (
-    <div>ApiTest</div>
+    <section>
+      <h1>Atividade 10</h1>
+      <h2>Fetch tipo</h2>
+      <button onClick={handleClick}>Fetch</button>
+      {carregando ? (
+        <p>Carregando ...</p>
+      ): (
+        <ul>
+          { tipos ? (
+            <li key={ tipos[0].id_tipo }><b>{ tipos[0].id_tipo }- </b>{ tipos[0].nome }</li>
+          ) : null }
+        </ul>
+      )}
+    </section>
   )
 }
 
