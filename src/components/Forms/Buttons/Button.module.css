@@ -32,5 +32,9 @@
 }
 
 .button i {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.active.btnToggle {
+  transform: rotate(45deg);
 }

@@ -1,10 +1,18 @@
 import React from 'react'
 import styles from './Button.module.css'
+import 'primeicons/primeicons.css'
 
-const BtnToggle = ({ active }) => {
+const BtnToggle = ({ active, ...props }) => {
 
   return (
-    <button className={`${active ? styles.active : ''}`}>+</button>
+    <button 
+      className={`
+        ${active ? styles.active : ''}
+        ${styles.button}
+        ${styles.btnToggle}
+      `}
+      {...props}
+    ><i className='pi pi-plus'></i></button>
   )
 }
 

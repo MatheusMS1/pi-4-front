@@ -1,0 +1,34 @@
+.container {
+
+}
+
+.header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header button {
+  margin-bottom: 1rem;
+}
+
+.formBody {
+  display: none;
+}
+
+.active .formBody {
+  display: initial;
+  animation: resize .3s ease forwards;
+}
+
+@keyframes resize {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+  99% {
+    height: 10rem;
+    opacity: 1;
+  }
+}

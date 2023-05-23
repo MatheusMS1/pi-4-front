@@ -2,13 +2,13 @@ import React from 'react'
 import styles from './Button.module.css'
 import 'primeicons/primeicons.css'
 
-const BtnVoltar = ({ ...props }) => {
+const BtnReset = ({ ...props }) => {
   return (
     <button className={`${styles.button}`} {...props} type='reset'>
-      <i className='pi pi-arrow-left'></i>
-      Voltar
+      <i className='pi pi-trash'></i>
+      Limpar
     </button>
   )
 }
 
-export default BtnVoltar
+export default BtnReset
