@@ -1,0 +1,9 @@
+.header {
+  grid-column: 1/13;
+  padding: 1rem 0;
+}
+
+.header img {
+  height: 2rem;
+  opacity: .1;
+}
