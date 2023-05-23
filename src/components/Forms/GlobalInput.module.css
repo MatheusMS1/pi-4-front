@@ -41,6 +41,7 @@ input:-webkit-autofill {
 .input:focus,
 .input:hover {
   box-shadow: 0 0 0px 2px var(--color-action);
+  background: rgba(255, 255, 255, 0.144);
 }
 
 .input:focus ~ .label,
