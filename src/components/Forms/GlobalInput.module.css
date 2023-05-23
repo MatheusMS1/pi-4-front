@@ -1,0 +1,55 @@
+.container {
+  display: flex;  
+  flex-direction: column-reverse;
+  margin-bottom: 1.5rem;
+}
+
+.input {
+  padding: .7rem;
+  border-radius: .3rem;
+  background: none;
+  color: var(--color-main);
+  border: none;
+  box-shadow: 0 0 0px 1px rgba(255, 255, 255, 0.514);
+  outline: none;
+}
+
+.select.invalid {
+  color: rgba(255, 255, 255, 0.384);
+  text-transform: capitalize;
+}
+
+.select option {
+  background-color: var(--color-bg);
+  border-radius: .5rem;
+  padding: .5rem;
+}
+
+.select option:not(:disabled) {
+  color: var(--color-main);
+}
+
+.select option:not(:disabled):active {
+  background: rgba(255, 255, 255, 0.144);
+}
+
+.input:focus,
+.input:hover {
+  box-shadow: 0 0 0px 2px var(--color-action);
+}
+
+.input:focus ~ .label,
+.input:hover ~ .label {
+  color: var(--color-action);
+}
+
+.label  {
+  text-transform: capitalize;
+  padding-bottom: .5rem;
+}
+
+.input::placeholder {
+  color: white;
+  opacity: .4;
+  text-transform: capitalize;
+}
