@@ -1,0 +1,16 @@
+.title {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.title::before{
+  position: absolute;
+  content: '';
+  height: 1.3rem;
+  width: 1.3rem;
+  border-radius: .2rem;
+  background-color: var(--color-second);
+  bottom: .4rem;
+  left: -.3rem;
+  z-index: -1;
+}

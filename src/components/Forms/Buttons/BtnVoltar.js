@@ -4,7 +4,10 @@ import 'primeicons/primeicons.css'
 
 const BtnVoltar = ({ ...props }) => {
   return (
-    <button className={`${styles.button}`} {...props}><i className='pi pi-arrow-left'></i><span>Voltar</span></button>
+    <button className={`${styles.button}`} {...props} type='reset'>
+      <i className='pi pi-arrow-left'></i>
+      <span>Voltar</span>
+    </button>
   )
 }
 

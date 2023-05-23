@@ -1,4 +1,4 @@
-import React, { Children, useState } from 'react'
+import React, { useState } from 'react'
 import styles from './GlobalInput.module.css'
 
 const Select = ({ name, children, ...props }) => {

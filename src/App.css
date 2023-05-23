@@ -19,4 +19,19 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Spectral', serif;
+  font-weight: normal;
+}
+
+.container {
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+  padding: 3rem;
+  margin: 0 auto;
+}
+
+.form-page {
+  grid-column: 4/10;
+  padding: 0 2rem;
 }
