@@ -14,6 +14,11 @@
   outline: none;
 }
 
+input:-webkit-autofill {
+  -webkit-text-fill-color: var(--color-main);
+  transition: background-color 5000s ease-in-out 0s;
+}
+
 .select.invalid {
   color: rgba(255, 255, 255, 0.384);
   text-transform: capitalize;
