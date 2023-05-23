@@ -1,10 +1,11 @@
 import './App.css';
-import ApiTest from './components/apiTest/ApiTest';
+import Input from './components/Forms/Input/Input'
 
 function App() {
   return (
     <div className="App">
-      <ApiTest/>
+      <Input type='text' placeholder='text' label='Nome'/>
+      <Input type='number' placeholder='number' label='numero'/>
     </div>
   );
 }
