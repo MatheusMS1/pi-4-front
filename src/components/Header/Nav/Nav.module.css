@@ -3,7 +3,12 @@
   gap: 1.5rem;
 }
 
-.nav a { position: relative;}
+.nav a { 
+  position: relative;
+  opacity: .5;
+}
+
+.nav a:global(.active), .nav a:hover { opacity: 1;}
 
 .nav a::after {
   content: '';
