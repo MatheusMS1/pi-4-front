@@ -4,6 +4,7 @@ import Header from './components/Header/Header';
 import Teste from './components/Pages/Teste/Teste';
 import Home from './components/Pages/Home/Home';
 import Config from './components/Pages/Config/Config';
+import NewEquipment from './components/Pages/NewEquipment/NewEquipment';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path='/teste' element={ <Teste/> } />
           <Route path='/' element={ <Home/> } />
           <Route path='/config' element={ <Config/> } />
+          <Route path='/equipamentos/new' element={ <NewEquipment/> } />
         </Routes>
       </BrowserRouter>
     </div>

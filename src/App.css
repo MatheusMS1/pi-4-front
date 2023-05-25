@@ -40,3 +40,31 @@ a {
   grid-column: 4/10;
   padding: 0 2rem;
 }
+
+.button-default {
+  color: var(--color-action);
+  background: none;
+  border: none;
+  display: flex;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: .2s;
+  gap: .3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-default:disabled {
+  opacity: .5;
+  cursor: wait;
+}
+
+.button-default:not(:disabled):hover {
+  color: var(--color-main);
+  transition: .2s;
+  gap: .5rem;
+}
+
+.button-default i {
+  font-size: 1.3rem;
+}

@@ -14,9 +14,9 @@
   content: '';
   width: 0;
   display: block;
-  height: .22rem;
+  height: .2rem;
   background-color: white;
-  margin-top: .2rem;
+  margin-top: .1rem;
 }
 
 .nav a:hover::after { animation: fill-underline .3s ease forwards;}
