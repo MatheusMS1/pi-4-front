@@ -1,0 +1,12 @@
+.tableHead {
+  background: linear-gradient( #4f4f4f, #4f4f4f3f );
+  padding: 1rem;
+  display: grid;
+  grid-column: repeat(12, 1fr);
+  gap: 1rem;
+}
+
+th {
+  display: flex;
+  justify-content: flex-start;
+}
