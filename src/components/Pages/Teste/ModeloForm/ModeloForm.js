@@ -1,11 +1,11 @@
 import React from 'react'
-import Input from '../Forms/Inputs/Input'
-import Textarea from '../Forms/Inputs/Textarea'
-import Select from '../Forms/Inputs/Select'
-import BtnVoltar from '../Forms/Buttons/BtnVoltar'
-import BtnSalvar from '../Forms/Buttons/BtnSalvar'
-import FormTitle from '../Forms/Titles/FormTitle'
-import FormContainer from '../Forms/Containers/FormContainer'
+import Input from '../../../Forms/Inputs/Input'
+import Textarea from '../../../Forms/Inputs/Textarea'
+import Select from '../../../Forms/Inputs/Select'
+import BtnVoltar from '../../../Forms/Buttons/BtnVoltar'
+import BtnSalvar from '../../../Forms/Buttons/BtnSalvar'
+import FormTitle from '../../../Forms/Titles/FormTitle'
+import FormContainer from '../../../Forms/Containers/FormContainer'
 
 const ModeloForm = () => {
   return (

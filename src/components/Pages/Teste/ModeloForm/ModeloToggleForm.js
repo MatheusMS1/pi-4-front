@@ -1,9 +1,9 @@
 import React from 'react'
-import ToggleForm from '../Forms/ToggleForm/ToggleForm'
-import Input from '../Forms/Inputs/Input'
-import FormContainer from '../Forms/Containers/FormContainer'
-import BtnReset from '../Forms/Buttons/BtnReset'
-import BtnSalvar from '../Forms/Buttons/BtnSalvar'
+import ToggleForm from '../../../Forms/ToggleForm/ToggleForm'
+import Input from '../../../Forms/Inputs/Input'
+import FormContainer from '../../../Forms/Containers/FormContainer'
+import BtnReset from '../../../Forms/Buttons/BtnReset'
+import BtnSalvar from '../../../Forms/Buttons/BtnSalvar'
 
 const ModeloToggleForm = () => {
   return (
