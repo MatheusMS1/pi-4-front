@@ -1,7 +1,7 @@
 import React from 'react'
-import styles from './FormTitle.module.css'
+import styles from './Title.module.css'
 
-const FormTitle = ({children}) => {
+const Title = ({children}) => {
   return (
     <h1 className={styles.title}>
       {children}
@@ -9,4 +9,4 @@ const FormTitle = ({children}) => {
   )
 }
 
-export default FormTitle
+export default Title

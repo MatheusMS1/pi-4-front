@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import FormTitle from '../Titles/FormTitle'
+import Title from '../../Title/Title'
 import BtnToggle from '../Buttons/BtnToggle'
 import styles from './ToggleForm.module.css'
 
@@ -9,7 +9,7 @@ const ToggleForm = ({ children, title }) => {
   return (
     <div className={`${active ? styles.active : ''}`}>
       <header className={styles.header}>
-        <FormTitle>{title}</FormTitle>        
+        <Title>{title}</Title>        
         <BtnToggle onClick={() => setActive(!active)} active={active}/>
       </header>
 

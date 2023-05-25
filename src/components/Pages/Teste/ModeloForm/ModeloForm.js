@@ -4,13 +4,13 @@ import Textarea from '../../../Forms/Inputs/Textarea'
 import Select from '../../../Forms/Inputs/Select'
 import BtnVoltar from '../../../Forms/Buttons/BtnVoltar'
 import BtnSalvar from '../../../Forms/Buttons/BtnSalvar'
-import FormTitle from '../../../Forms/Titles/FormTitle'
+import Title from '../../../Title/Title'
 import FormContainer from '../../../Forms/Containers/FormContainer'
 
 const ModeloForm = () => {
   return (
     <div className='form-page'>
-      <FormTitle>Titulo do formulario</FormTitle>
+      <Title>Titulo do formulario</Title>
 
       <form>
         <Input type='text' placeholder='fulano de tal' name='Nome'/>

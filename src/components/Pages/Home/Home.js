@@ -1,6 +1,11 @@
+import styles from './Home.module.css'
+import Title from '../../Title/Title'
+
 const Home = () => {
   return (
-    <section>Home</section>
+    <section className={styles.home}>
+      <Title>Equipamentos</Title>
+    </section>
   )
 }
 
