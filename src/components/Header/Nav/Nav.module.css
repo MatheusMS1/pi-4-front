@@ -1,0 +1,30 @@
+.nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav a {
+  position: relative;
+}
+
+.nav a::after {
+  content: '';
+  width: 0;
+  display: block;
+  height: .22rem;
+  background-color: white;
+  margin-top: .2rem;
+}
+
+.nav a:hover::after {
+  animation: fill-underline .3s ease forwards;
+}
+
+.nav a:global(.active)::after {
+  background-color: var(--color-action);
+  width: 100%;
+}
+
+@keyframes fill-underline {
+  to { width: 100%;}
+}

@@ -7,16 +7,14 @@ import Config from './components/Pages/Config/Config';
 
 function App() {
   return (
-    <div className="">
+    <div className="container">
       <BrowserRouter>
         <Header/>
-        <main className='container'>
-          <Routes>
-            <Route path='/teste' element={ <Teste/> } />
-            <Route path='/' element={ <Home/> } />
-            <Route path='/config' element={ <Config/> } />
-          </Routes>
-        </main>
+        <Routes>
+          <Route path='/teste' element={ <Teste/> } />
+          <Route path='/' element={ <Home/> } />
+          <Route path='/config' element={ <Config/> } />
+        </Routes>
       </BrowserRouter>
     </div>
   );
