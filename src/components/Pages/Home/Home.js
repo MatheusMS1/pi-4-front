@@ -2,6 +2,7 @@ import styles from './Home.module.css'
 import Title from '../../Title/Title'
 import { NavLink } from 'react-router-dom'
 import TableHead from '../../Table/TableHead/TableHead'
+import TableBody from '../../Table/TableBody/TableBody'
 
 const Home = () => {
   return (
@@ -18,6 +19,15 @@ const Home = () => {
           <th>Descrição</th>
           <th>Status</th>
         </TableHead>
+        <TableBody>
+          <tr>
+            <th>123</th>
+            <td>Tecrado</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </TableBody>
       </table>
     </section>
   )

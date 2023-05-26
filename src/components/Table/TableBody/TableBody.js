@@ -3,7 +3,7 @@ import styles from './TableBody.module.css'
 
 const TableBody = ({children}) => {
   return (
-    <tbody className={styles.tableBody}>{children}</tbody>
+    <div className={styles.tableBody}>{children}</div>
   )
 }
 
