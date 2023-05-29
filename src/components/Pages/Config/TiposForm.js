@@ -13,9 +13,18 @@ const TiposForm = () => {
     console.log(name)
   }
 
+  const handleSubmit = event => {
+    event.preventDefault()
+    fetch('https://api-pi-2on3.onrender.com/tipos', {
+      method: 'POST',
+      headers: {'Content-type': 'application/json'},
+      body: JSON.stringify({name})
+    })
+  }
+
   return (
     <ToggleForm title='Tipos'>
-      <form>
+      <form onSubmit={handleSubmit}>
         <Input 
           type='text' 
           name='Nome' 
