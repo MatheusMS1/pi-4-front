@@ -6,19 +6,17 @@ import FormContainer from '../../Forms/Containers/FormContainer'
 import BtnReset from '../../Forms/Buttons/BtnReset'
 
 const TiposForm = () => {
-  const [ name, setName ] = useState(null)
-
-  const handleChange = ({target}) => {
-    setName(target.value)
-    console.log(name)
-  }
+  const [ nome, setNome ] = useState(null)
 
   const handleSubmit = event => {
     event.preventDefault()
+    const body = {nome}
+    console.log(JSON.stringify(body))
+
     fetch('https://api-pi-2on3.onrender.com/tipos', {
       method: 'POST',
-      headers: {'Content-type': 'application/json'},
-      body: JSON.stringify({name})
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(body)
     })
   }
 
@@ -30,7 +28,7 @@ const TiposForm = () => {
           name='Nome' 
           required 
           placeholder='Periferico' 
-          onChange={handleChange}
+          onChange={({target}) => setNome(target.value)}
         />
         <FormContainer>
           <BtnReset/>
