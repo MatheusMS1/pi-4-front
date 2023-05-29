@@ -11,7 +11,7 @@ const Input = ({ name, type, ...props }) => {
         type={type}
         min={type === 'number' ? 0 : null}
       />
-      <label for={name} className={styles.label}>{ name }</label>
+      <label htmlFor={name} className={styles.label}>{ name }</label>
     </div>
   )
 }
