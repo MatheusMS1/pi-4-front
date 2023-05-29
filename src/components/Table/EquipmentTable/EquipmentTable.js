@@ -1,6 +1,5 @@
 import React from 'react'
 import styles from './EquipmentTable.module.css'
-import tableStyles from '../Table.module.css'
 
 const EquipmentTable = () => {
   return (

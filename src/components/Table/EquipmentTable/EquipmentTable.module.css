@@ -1,6 +1,3 @@
 .equipTable {
   grid-column: 1/13;
 }
-.equipTable thead {
-  /* grid-column: 1/13; */
-}

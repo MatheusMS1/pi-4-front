@@ -1,0 +1,7 @@
+.leftContainer {
+  grid-column: 1/6;
+}
+
+.rightContainer {
+  grid-column: 7/13;
+}

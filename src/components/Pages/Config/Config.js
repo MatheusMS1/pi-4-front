@@ -1,6 +1,17 @@
+import TiposForm from "./TiposForm"
+import ZonaForm from "./ZonaForm"
+import styles from './Config.module.css'
+
 const Config = () => {
   return (
-    <section>Configurasao</section>
+    <>
+      <div className={styles.leftContainer}>
+        <TiposForm/>
+      </div>
+      <div className={styles.rightContainer}>
+        <ZonaForm/>
+      </div>
+    </>
   )
 }
 
