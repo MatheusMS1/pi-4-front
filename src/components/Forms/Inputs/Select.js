@@ -15,7 +15,7 @@ const Select = ({ name, children, ...props }) => {
         <option disabled selected>Selecione</option>
         {children}
       </select>
-      <label for={name} className={styles.label}>{ name }</label>
+      <label htmlFor={name} className={styles.label}>{ name }</label>
     </div>
   )
 }

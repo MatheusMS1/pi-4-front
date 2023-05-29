@@ -5,7 +5,7 @@ const Textarea = ({ name, ...props }) => {
   return (
     <div className={styles.container}>
       <textarea id={name} name={name} className={`${styles.input} ${styles.textarea}`} {...props}/>
-      <label for={name} className={styles.label}>{ name }</label>
+      <label htmlFor={name} className={styles.label}>{ name }</label>
     </div>
   )
 }
