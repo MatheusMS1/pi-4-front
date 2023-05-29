@@ -8,7 +8,7 @@ const TipoTable = () => {
   useEffect(() => {
     fetch('https://api-pi-2on3.onrender.com/tipos')
     .then(res => res.json())
-    .then(json => {setTipos(json); console.log(json)})
+    .then(json => setTipos(json))
   }, [])
 
   return (
