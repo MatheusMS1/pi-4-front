@@ -3,8 +3,8 @@ import Title from '../../Title/Title'
 import BtnToggle from '../Buttons/BtnToggle'
 import styles from './ToggleForm.module.css'
 
-const ToggleForm = ({ children, title }) => {
-  const [ active, setActive ] = useState()
+const ToggleForm = ({ children, title, propActive }) => {
+  const [ active, setActive ] = useState(propActive)
 
   return (
     <div className={`${active ? styles.active : ''}`}>
