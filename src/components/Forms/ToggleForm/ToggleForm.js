@@ -3,8 +3,14 @@ import Title from '../../Title/Title'
 import BtnToggle from '../Buttons/BtnToggle'
 import styles from './ToggleForm.module.css'
 
-const ToggleForm = ({ children, title, propActive }) => {
+const ToggleForm = ({ children, title, propActive, handleSubmit }) => {
   const [ active, setActive ] = useState(propActive)
+
+  const handleSubmitForm = event => {
+    event.preventDefault()
+    handleSubmit()
+    setActive(false)
+  }
 
   return (
     <div className={`${active ? styles.active : ''}`}>
@@ -14,7 +20,9 @@ const ToggleForm = ({ children, title, propActive }) => {
       </header>
 
       <div className={`${styles.formBody}`}>
-        {children}
+        <form onSubmit={handleSubmitForm}>
+          {children}
+        </form>
       </div>
     </div>
   )

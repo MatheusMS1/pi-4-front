@@ -11,7 +11,6 @@ const ZonaForm = () => {
   const [ description, setDescription ] = useState(null)
 
   const handleSubmit = event => {
-    event.preventDefault()
     fetch('https://api-pi-2on3.onrender.com/zonas', {
       method: 'POST',
       headers: {'Content-type': 'application/json'},
@@ -21,8 +20,7 @@ const ZonaForm = () => {
 
   return (
     <ToggleForm title='Zonas'>
-      <form onSubmit={handleSubmit}>
-        <Input
+        {/* <Input
           type='text'
           name='Nome'
           placeholder='Armario XYZ'
@@ -39,8 +37,7 @@ const ZonaForm = () => {
         <FormContainer>
           <BtnReset/>
           <BtnSalvar/>
-        </FormContainer>
-      </form>
+        </FormContainer> */}
     </ToggleForm>
   )
 }

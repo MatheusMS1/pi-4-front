@@ -11,7 +11,6 @@ const TiposForm = ({ fetchTipos }) => {
   const [ active, setActive ] = useState(false)
 
   const handleSubmit = event => {
-    event.preventDefault()
     setLoading(true)
     const body = {nome}
 
@@ -28,8 +27,7 @@ const TiposForm = ({ fetchTipos }) => {
   }
 
   return (
-    <ToggleForm title='Tipos' propActive={active}>
-      <form onSubmit={handleSubmit}>
+    <ToggleForm title='Tipos' propActive={active} handleSubmit={handleSubmit}>
         <Input 
           type='text' 
           name='Nome' 
@@ -41,7 +39,6 @@ const TiposForm = ({ fetchTipos }) => {
           <BtnReset disabled={loading ? true : false}/>
           <BtnSalvar disabled={loading ? true : false}/>
         </FormContainer>
-      </form>
     </ToggleForm>
   )
 }
