@@ -42,7 +42,11 @@ const Config = () => {
       </div>
       <div className={styles.rightContainer}>
         <ZonaForm fetchZonas={fetchZonas}/>
-        <ZonaTable zonas={zonas} loading={loadingZonas}/>
+        <ZonaTable 
+          zonas={zonas} 
+          loading={loadingZonas}
+          fetchZonas={fetchZonas}
+        />
       </div>
     </>
   )
