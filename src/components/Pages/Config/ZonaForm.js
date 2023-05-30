@@ -23,7 +23,7 @@ const ZonaForm = ({ fetchZonas }) => {
     })
     .then(() => {
       fetchZonas()
-      setLoading(true)
+      setLoading(false)
       setActive(false)
     })
   }
@@ -45,8 +45,8 @@ const ZonaForm = ({ fetchZonas }) => {
         onChange={({target}) => setDescricao(target.value)}
       />
       <FormContainer>
-        <BtnReset/>
-        <BtnSalvar/>
+        <BtnReset disabled={loading ? true : false}/>
+        <BtnSalvar disabled={loading ? true : false}/>
       </FormContainer>
     </ToggleForm>
   )
