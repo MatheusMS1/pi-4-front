@@ -1,0 +1,24 @@
+.td {
+  cursor: pointer;
+}
+
+.td button {
+  transition: .2s;
+}
+
+.td button {
+  display: none;
+}
+
+.td:hover button {
+  display: initial; 
+}
+
+
+.td i {
+  font-size: 1.3rem;
+}
+
+.td:hover > i {
+  display: none;
+}
