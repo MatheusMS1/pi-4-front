@@ -6,38 +6,48 @@ import FormContainer from '../../Forms/Containers/FormContainer'
 import BtnReset from '../../Forms/Buttons/BtnReset'
 import BtnSalvar from '../../Forms/Buttons/BtnSalvar'
 
-const ZonaForm = () => {
-  const [ name, setName ] = useState(null)
-  const [ description, setDescription ] = useState(null)
+const ZonaForm = ({ fetchZonas }) => {
+  const [ nome, setNome ] = useState(null)
+  const [ descricao, setDescricao ] = useState(null)
+  const [ loading, setLoading ] = useState(false)
+  const [ active, setActive ] = useState(false)
 
-  const handleSubmit = event => {
+  const handleSubmit = () => {
+    setLoading(true)
+    const body = {nome, descricao}
+
     fetch('https://api-pi-2on3.onrender.com/zonas', {
       method: 'POST',
-      headers: {'Content-type': 'application/json'},
-      body: JSON.stringify({name, description})
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(body)
+    })
+    .then(() => {
+      fetchZonas()
+      setLoading(true)
+      setActive(false)
     })
   }
 
   return (
-    <ToggleForm title='Zonas'>
-        {/* <Input
-          type='text'
-          name='Nome'
-          placeholder='Armario XYZ'
-          required
-          onChange={({target}) => setName(target.value)}
-        />
-        <Textarea
-          type='text'
-          name='Descrição'
-          placeholder='Aguardando Teste'
-          required
-          onChange={({target}) => setDescription(target.value)}
-        />
-        <FormContainer>
-          <BtnReset/>
-          <BtnSalvar/>
-        </FormContainer> */}
+    <ToggleForm title='Zonas' propActive={active} handleSubmit={handleSubmit}>
+      <Input
+        type='text'
+        name='Nome'
+        placeholder='Armario XYZ'
+        required
+        onChange={({target}) => setNome(target.value)}
+      />
+      <Textarea
+        type='text'
+        name='Descrição'
+        placeholder='Aguardando Teste'
+        required
+        onChange={({target}) => setDescricao(target.value)}
+      />
+      <FormContainer>
+        <BtnReset/>
+        <BtnSalvar/>
+      </FormContainer>
     </ToggleForm>
   )
 }

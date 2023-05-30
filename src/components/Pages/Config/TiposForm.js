@@ -10,7 +10,7 @@ const TiposForm = ({ fetchTipos }) => {
   const [ loading, setLoading ] = useState(false)
   const [ active, setActive ] = useState(false)
 
-  const handleSubmit = event => {
+  const handleSubmit = () => {
     setLoading(true)
     const body = {nome}
 

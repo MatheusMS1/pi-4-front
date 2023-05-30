@@ -37,7 +37,7 @@ const Config = () => {
         <TipoTable tipos={tipos} loading={loadingTipos}/>
       </div>
       <div className={styles.rightContainer}>
-        <ZonaForm/>
+        <ZonaForm fetchZonas={fetchZonas}/>
         <ZonaTable zonas={zonas} loading={loadingZonas}/>
       </div>
     </>
