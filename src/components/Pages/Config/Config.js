@@ -19,27 +19,26 @@ const Config = () => {
     .then(json => {setZonas(json); setLoadingZonas(false)})
   }
 
-  const fetchTipos = () => {
-    setLoadingTipos(true)
-    fetch('https://api-pi-2on3.onrender.com/tipos')
-   .then(res => res.json())
-   .then(json => {setTipos(json); setLoadingTipos(false)})
-  }
+  // const fetchTipos = () => {
+  //   setLoadingTipos(true)
+  //   fetch('https://api-pi-2on3.onrender.com/tipos')
+  //  .then(res => res.json())
+  //  .then(json => {setTipos(json); setLoadingTipos(false)})
+  // }
 
-  useEffect(() => {
-    fetchZonas()
-    fetchTipos()
-  }, [])
+  // useEffect(() => {
+  //   fetchZonas()
+  //   fetchTipos()
+  // }, [])
 
   return (
     <>
       <div className={styles.leftContainer}>
         <TipoStorage>
-          <TiposForm fetchTipos={fetchTipos}/>
+          <TiposForm/>
           <TipoTable 
             tipos={tipos} 
             loading={loadingTipos}
-            fetchTipos={fetchTipos}
           />
         </TipoStorage>
       </div>

@@ -7,20 +7,32 @@ import BtnSalvar from '../../../Forms/Buttons/BtnSalvar'
 import { TipoContext } from './TipoContext'
 
 const TipoModal = () => {
-  const context = useContext(TipoContext)
+  const { editTarget, setEditTarget, fetchTipos } = useContext(TipoContext)
+  const [ loadingRequest, setLoadingRequest ] = useState(false)
   const [ nome, setNome ] = useState('')
 
   useEffect(() => {
-    setNome(context.editTarget?.nome || '')
-  }, [context.editTarget])
+    setNome(editTarget?.nome || '')
+  }, [editTarget])
 
   const handleSubmit = event => {
     event.preventDefault()
-    console.log('ala')
+    setLoadingRequest(true)
+    const body = {nome}
+
+    fetch(`https://api-pi-2on3.onrender.com/tipos/${editTarget?.id_tipo}`, {
+      method: 'PUT',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(body)
+    }
+    ).then(() => {
+      fetchTipos()
+      setEditTarget(null)
+    })
   }
 
   return (
-    <Modal title='Editar Tipo' active={context.editTarget}>
+    <Modal title='Editar Tipo' active={editTarget}>
       <form style={{marginBottom: '0'}} onSubmit={handleSubmit}>
         <Input 
           name='Novo nome'
@@ -29,8 +41,8 @@ const TipoModal = () => {
           required
         />
         <FormContainer>
-          <BtnVoltar onClick={() => context.setEditTarget(null)} />
-          <BtnSalvar/>
+          <BtnVoltar disabled={loadingRequest} onClick={() => setEditTarget(null)} />
+          <BtnSalvar disabled={loadingRequest} />
         </FormContainer>
       </form>
     </Modal>

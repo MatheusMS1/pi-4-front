@@ -5,8 +5,10 @@ import ActionContainer from '../../../Table/ActionContainer'
 import TipoModal from './TipoModal'
 import { TipoContext } from './TipoContext'
 
-const TipoTable = ({tipos, loading, fetchTipos}) => {
-  const context = useContext(TipoContext)
+const TipoTable = () => {
+  const { fetchTipos, tipos, loading, setEditTarget } = useContext(TipoContext)
+
+  useEffect(fetchTipos, [])
 
   return (
     <>
@@ -19,7 +21,7 @@ const TipoTable = ({tipos, loading, fetchTipos}) => {
         </tr>
       </thead>
       <tbody>
-        { tipos.map( tipo => (
+        { tipos?.map( tipo => (
           <tr key={tipo.id_tipo}>
             <th>{tipo.id_tipo}</th>
             <td>{tipo.nome}</td>
@@ -28,7 +30,7 @@ const TipoTable = ({tipos, loading, fetchTipos}) => {
                 targetTable={'tipos'} 
                 target_id={tipo?.id_tipo}
                 fetchFunction={fetchTipos}
-                handleEdit={() => context.setEditTarget(tipo)}
+                handleEdit={() => setEditTarget(tipo)}
               />
             </td>
           </tr>

@@ -1,14 +1,16 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import ToggleForm from '../../../Forms/ToggleForm/ToggleForm'
 import Input from '../../../Forms/Inputs/Input'
 import BtnSalvar from '../../../Forms/Buttons/BtnSalvar'
 import FormContainer from '../../../Forms/Containers/FormContainer'
 import BtnReset from '../../../Forms/Buttons/BtnReset'
+import { TipoContext } from './TipoContext'
 
-const TiposForm = ({ fetchTipos }) => {
+const TiposForm = () => {
   const [ nome, setNome ] = useState(null)
   const [ loading, setLoading ] = useState(false)
   const [ active, setActive ] = useState(false)
+  const { fetchTipos } = useContext(TipoContext)
 
   const handleSubmit = () => {
     setLoading(true)
