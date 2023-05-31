@@ -1,8 +1,8 @@
 import TiposForm from "./TiposForm"
 import ZonaForm from "./ZonaForm"
 import styles from './Config.module.css'
-import TipoTable from "../../Table/TipoTable/TipoTable"
-import ZonaTable from "../../Table/ZonaTable/ZonaTable"
+import TipoTable from "./TipoTable"
+import ZonaTable from "./ZonaTable"
 import { useEffect, useState } from "react"
 
 const Config = () => {

@@ -10,3 +10,8 @@
 .rightContainer form {
   margin-bottom: 3rem;
 }
+
+.leftContainer table,
+.rightContainer table {
+  width: 100%;
+}

@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import '../Table.css'
-import styles from './ZonaTable.module.css'
+import '../../Table/Table.css'
 import Loading from '../../Helper/Loading'
-import ActionContainer from '../ActionContainer'
+import ActionContainer from '../../Table/ActionContainer'
 
 const ZonaTable = ({ zonas, loading, fetchZonas }) => {
   return (
-    <table className={styles.table}>
+    <table>
       <thead>
         <tr>
           <th>ID</th>

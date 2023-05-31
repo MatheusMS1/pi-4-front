@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import '../Table.css'
-import styles from './TipoTable.module.css'
+import '../../Table/Table.css'
 import Loading from '../../Helper/Loading'
-import ActionContainer from '../ActionContainer'
+import ActionContainer from '../../Table/ActionContainer'
 
 const TipoTable = ({tipos, loading, fetchTipos}) => {
 
   return (
-    <table className={styles.table}>
+    <table>
       <thead>
         <tr>
           <th>ID</th>
