@@ -20,11 +20,13 @@ const ZonaTable = ({ zonas, loading, fetchZonas }) => {
             <th>{zona.id_zona}</th>
             <td>{zona.nome}</td>
             <td>{zona.descricao}</td>
-            <ActionContainer
-              targetTable={'zonas'} 
-              target_id={zona?.id_zona}
-              fetchFunction={fetchZonas}
-            />
+            <td>
+              <ActionContainer
+                targetTable={'zonas'} 
+                target_id={zona?.id_zona}
+                fetchFunction={fetchZonas}
+              />
+            </td>
           </tr>
         ))}
 

@@ -21,11 +21,13 @@ const TipoTable = ({tipos, loading, fetchTipos}) => {
           <tr key={tipo.id_tipo}>
             <th>{tipo.id_tipo}</th>
             <td>{tipo.nome}</td>
-            <ActionContainer 
-              targetTable={'tipos'} 
-              target_id={tipo?.id_tipo}
-              fetchFunction={fetchTipos}
-            />
+            <td>
+              <ActionContainer 
+                targetTable={'tipos'} 
+                target_id={tipo?.id_tipo}
+                fetchFunction={fetchTipos}
+              />
+            </td>
           </tr>
         ))}
 

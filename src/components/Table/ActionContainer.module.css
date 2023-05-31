@@ -1,20 +1,25 @@
-.td {
+.div {
   cursor: pointer;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
 }
 
-.td button {
+.div button {
   display: none;
 }
 
-.td:hover button {
+.div:hover button {
   display: initial; 
 }
 
 
-.td i {
+.div i {
   font-size: 1.3rem;
 }
 
-.td:hover > i {
+.div:hover > i {
   display: none;
 }

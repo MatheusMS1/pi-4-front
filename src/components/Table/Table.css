@@ -28,9 +28,3 @@ tbody tr td:last-of-type {
 tr {
   position: relative;
 }
-
-tr td:last-of-type {
-  display: flex;
-  justify-content: flex-end;
-  gap: 1rem;
-}
