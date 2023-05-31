@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import '../../../Table/Table.css'
 import Loading from '../../../Helper/Loading'
 import ActionContainer from '../../../Table/ActionContainer'
 import TipoModal from './TipoModal'
+import { TipoContext } from './TipoContext'
 
 const TipoTable = ({tipos, loading, fetchTipos}) => {
+  const context = useContext(TipoContext)
 
   return (
     <>
@@ -26,6 +28,7 @@ const TipoTable = ({tipos, loading, fetchTipos}) => {
                 targetTable={'tipos'} 
                 target_id={tipo?.id_tipo}
                 fetchFunction={fetchTipos}
+                handleEdit={() => context.setEditTarget(tipo)}
               />
             </td>
           </tr>
@@ -40,8 +43,7 @@ const TipoTable = ({tipos, loading, fetchTipos}) => {
         ) : null}
       </tbody>
     </table>
-    <TipoModal
-    />
+    <TipoModal/>
     </>
   )
 }

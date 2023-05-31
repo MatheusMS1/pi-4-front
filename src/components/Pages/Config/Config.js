@@ -4,6 +4,7 @@ import styles from './Config.module.css'
 import TipoTable from "./Tipo/TipoTable"
 import ZonaTable from "./Zona/ZonaTable"
 import { useEffect, useState } from "react"
+import { TipoStorage } from "./Tipo/TipoContext"
 
 const Config = () => {
   const [ zonas, setZonas ] = useState([])
@@ -33,12 +34,14 @@ const Config = () => {
   return (
     <>
       <div className={styles.leftContainer}>
-        <TiposForm fetchTipos={fetchTipos}/>
-        <TipoTable 
-          tipos={tipos} 
-          loading={loadingTipos}
-          fetchTipos={fetchTipos}
-        />
+        <TipoStorage>
+          <TiposForm fetchTipos={fetchTipos}/>
+          <TipoTable 
+            tipos={tipos} 
+            loading={loadingTipos}
+            fetchTipos={fetchTipos}
+          />
+        </TipoStorage>
       </div>
       <div className={styles.rightContainer}>
         <ZonaForm fetchZonas={fetchZonas}/>
