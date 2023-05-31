@@ -2,10 +2,13 @@ import React, { useEffect, useState } from 'react'
 import '../../Table/Table.css'
 import Loading from '../../Helper/Loading'
 import ActionContainer from '../../Table/ActionContainer'
+import Modal from '../../Modal/Modal'
+import TipoModal from './TipoModal'
 
 const TipoTable = ({tipos, loading, fetchTipos}) => {
 
   return (
+    <>
     <table>
       <thead>
         <tr>
@@ -36,6 +39,8 @@ const TipoTable = ({tipos, loading, fetchTipos}) => {
         ) : null}
       </tbody>
     </table>
+    <TipoModal/>
+    </>
   )
 }
 
