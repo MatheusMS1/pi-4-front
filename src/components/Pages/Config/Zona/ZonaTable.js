@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import '../../Table/Table.css'
-import Loading from '../../Helper/Loading'
-import ActionContainer from '../../Table/ActionContainer'
+import '../../../Table/Table.css'
+import Loading from '../../../Helper/Loading'
+import ActionContainer from '../../../Table/ActionContainer'
 
 const ZonaTable = ({ zonas, loading, fetchZonas }) => {
   return (

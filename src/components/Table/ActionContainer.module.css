@@ -3,10 +3,6 @@
 }
 
 .td button {
-  transition: .2s;
-}
-
-.td button {
   display: none;
 }
 

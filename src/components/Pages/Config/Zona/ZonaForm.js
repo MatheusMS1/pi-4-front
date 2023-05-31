@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import ToggleForm from '../../Forms/ToggleForm/ToggleForm'
-import Input from '../../Forms/Inputs/Input'
-import Textarea from '../../Forms/Inputs/Textarea'
-import FormContainer from '../../Forms/Containers/FormContainer'
-import BtnReset from '../../Forms/Buttons/BtnReset'
-import BtnSalvar from '../../Forms/Buttons/BtnSalvar'
+import ToggleForm from '../../../Forms/ToggleForm/ToggleForm'
+import Input from '../../../Forms/Inputs/Input'
+import Textarea from '../../../Forms/Inputs/Textarea'
+import FormContainer from '../../../Forms/Containers/FormContainer'
+import BtnReset from '../../../Forms/Buttons/BtnReset'
+import BtnSalvar from '../../../Forms/Buttons/BtnSalvar'
 
 const ZonaForm = ({ fetchZonas }) => {
   const [ nome, setNome ] = useState(null)

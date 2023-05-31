@@ -26,7 +26,6 @@ const ActionContainer = ({ handleEdit, target_id, targetTable, fetchFunction }) 
         <button className='button-default' disabled={loading} onClick={handleDelete}><i className='pi pi-check'></i></button>
         </>
       )}
-
     </td>
   )
 }

@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import ToggleForm from '../../Forms/ToggleForm/ToggleForm'
-import Input from '../../Forms/Inputs/Input'
-import BtnSalvar from '../../Forms/Buttons/BtnSalvar'
-import FormContainer from '../../Forms/Containers/FormContainer'
-import BtnReset from '../../Forms/Buttons/BtnReset'
+import ToggleForm from '../../../Forms/ToggleForm/ToggleForm'
+import Input from '../../../Forms/Inputs/Input'
+import BtnSalvar from '../../../Forms/Buttons/BtnSalvar'
+import FormContainer from '../../../Forms/Containers/FormContainer'
+import BtnReset from '../../../Forms/Buttons/BtnReset'
 
 const TiposForm = ({ fetchTipos }) => {
   const [ nome, setNome ] = useState(null)
