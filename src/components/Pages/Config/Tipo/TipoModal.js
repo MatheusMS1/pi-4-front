@@ -7,7 +7,7 @@ import BtnSalvar from '../../../Forms/Buttons/BtnSalvar'
 import { TipoContext } from './TipoContext'
 
 const TipoModal = () => {
-  const { editTarget, setEditTarget, fetchTipos } = useContext(TipoContext)
+  const { editTarget, setEditTarget, fetchTipos, loading, setLoading } = useContext(TipoContext)
   const [ loadingRequest, setLoadingRequest ] = useState(false)
   const [ nome, setNome ] = useState('')
 
@@ -17,7 +17,7 @@ const TipoModal = () => {
 
   const handleSubmit = event => {
     event.preventDefault()
-    setLoadingRequest(true)
+    setLoading(true)
     const body = {nome}
 
     fetch(`https://api-pi-2on3.onrender.com/tipos/${editTarget?.id_tipo}`, {
@@ -41,8 +41,8 @@ const TipoModal = () => {
           required
         />
         <FormContainer>
-          <BtnVoltar disabled={loadingRequest} onClick={() => setEditTarget(null)} />
-          <BtnSalvar disabled={loadingRequest} />
+          <BtnVoltar disabled={loading} onClick={() => setEditTarget(null)} />
+          <BtnSalvar disabled={loading} />
         </FormContainer>
       </form>
     </Modal>

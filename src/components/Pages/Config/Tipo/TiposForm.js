@@ -8,9 +8,9 @@ import { TipoContext } from './TipoContext'
 
 const TiposForm = () => {
   const [ nome, setNome ] = useState(null)
-  const [ loading, setLoading ] = useState(false)
+  // const [ loading, setLoading ] = useState(false)
   const [ active, setActive ] = useState(false)
-  const { fetchTipos } = useContext(TipoContext)
+  const { fetchTipos, loading, setLoading } = useContext(TipoContext)
 
   const handleSubmit = () => {
     setLoading(true)
@@ -23,9 +23,9 @@ const TiposForm = () => {
     })
     .then(() => {
       fetchTipos()
-      setLoading(false)
       setActive(false)
     })
+    .then(() => setLoading(false))
   }
 
   return (
