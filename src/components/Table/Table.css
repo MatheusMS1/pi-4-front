@@ -28,3 +28,7 @@ tbody tr td:last-of-type {
 tr {
   position: relative;
 }
+
+td:has(div) {
+  position: relative;
+}

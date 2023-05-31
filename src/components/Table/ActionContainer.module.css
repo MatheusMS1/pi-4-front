@@ -5,6 +5,14 @@
   justify-content: flex-end;
   align-items: center;
   gap: 1rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  background-color: var(--color-bg);
+}
+
+.div:hover {
+  width: 4rem;
 }
 
 .div button {
@@ -14,7 +22,6 @@
 .div:hover button {
   display: initial; 
 }
-
 
 .div i {
   font-size: 1.3rem;

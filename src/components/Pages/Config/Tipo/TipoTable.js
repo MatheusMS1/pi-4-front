@@ -40,7 +40,8 @@ const TipoTable = ({tipos, loading, fetchTipos}) => {
         ) : null}
       </tbody>
     </table>
-    {/* <TipoModal/> */}
+    <TipoModal
+    />
     </>
   )
 }
