@@ -1,9 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import '../../../Table/Table.css'
 import Loading from '../../../Helper/Loading'
 import ActionContainer from '../../../Table/ActionContainer'
+import { ZonaContext } from './ZonaContext'
 
-const ZonaTable = ({ zonas, loading, fetchZonas }) => {
+const ZonaTable = () => {
+  const { fetchZonas, zonas, loading, setEditTarget } = useContext(ZonaContext)
+
+  useEffect(fetchZonas, [])
+
   return (
     <table>
       <thead>
@@ -15,7 +20,7 @@ const ZonaTable = ({ zonas, loading, fetchZonas }) => {
         </tr>
       </thead>
       <tbody>
-        {zonas.map( zona => (
+        {zonas?.map( zona => (
           <tr key={zona.id_zona}>
             <th>{zona.id_zona}</th>
             <td>{zona.nome}</td>
@@ -25,6 +30,7 @@ const ZonaTable = ({ zonas, loading, fetchZonas }) => {
                 targetTable={'zonas'} 
                 target_id={zona?.id_zona}
                 fetchFunction={fetchZonas}
+                handleEdit={() => setEditTarget(zona)}
               />
             </td>
           </tr>

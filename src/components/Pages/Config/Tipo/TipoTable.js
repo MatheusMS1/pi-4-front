@@ -45,7 +45,6 @@ const TipoTable = () => {
         ) : null}
       </tbody>
     </table>
-    <TipoModal/>
     </>
   )
 }

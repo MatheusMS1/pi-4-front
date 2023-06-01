@@ -8,7 +8,6 @@ import { TipoContext } from './TipoContext'
 
 const TiposForm = () => {
   const [ nome, setNome ] = useState(null)
-  // const [ loading, setLoading ] = useState(false)
   const [ active, setActive ] = useState(false)
   const { fetchTipos, loading, setLoading } = useContext(TipoContext)
 

@@ -1,16 +1,18 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import ToggleForm from '../../../Forms/ToggleForm/ToggleForm'
 import Input from '../../../Forms/Inputs/Input'
 import Textarea from '../../../Forms/Inputs/Textarea'
 import FormContainer from '../../../Forms/Containers/FormContainer'
 import BtnReset from '../../../Forms/Buttons/BtnReset'
 import BtnSalvar from '../../../Forms/Buttons/BtnSalvar'
+import { ZonaContext } from './ZonaContext'
 
-const ZonaForm = ({ fetchZonas }) => {
+const ZonaForm = () => {
   const [ nome, setNome ] = useState(null)
   const [ descricao, setDescricao ] = useState(null)
-  const [ loading, setLoading ] = useState(false)
   const [ active, setActive ] = useState(false)
+
+  const { fetchZonas, loading, setLoading } = useContext(ZonaContext)
 
   const handleSubmit = () => {
     setLoading(true)

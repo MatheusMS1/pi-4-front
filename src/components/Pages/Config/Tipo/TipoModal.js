@@ -7,8 +7,14 @@ import BtnSalvar from '../../../Forms/Buttons/BtnSalvar'
 import { TipoContext } from './TipoContext'
 
 const TipoModal = () => {
-  const { editTarget, setEditTarget, fetchTipos, loading, setLoading } = useContext(TipoContext)
-  const [ loadingRequest, setLoadingRequest ] = useState(false)
+  const {
+    editTarget, 
+    setEditTarget, 
+    fetchTipos, 
+    loading, 
+    setLoading 
+  } = useContext(TipoContext)
+
   const [ nome, setNome ] = useState('')
 
   useEffect(() => {
@@ -35,7 +41,7 @@ const TipoModal = () => {
     <Modal title='Editar Tipo' active={editTarget}>
       <form style={{marginBottom: '0'}} onSubmit={handleSubmit}>
         <Input 
-          name='Novo nome'
+          name='nome'
           value={nome}
           onChange={({target}) => setNome(target.value)}
           required
